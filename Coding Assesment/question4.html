@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Question 4
+Assume we have a form e.g
+<form>
+   <input type=”text” name=”firstname” />
+   <input type=”check” name=”checkme” />
+   <input type=”submit” value=”submit”
+</form>
+For the above form, write validation in javascript so that if the firstname is empty or if checkme is not checked, it will not allow the form to submit. -->
+
+<body>
+
+    <form>
+        <div>
+            <label>First Name</label>
+            <input id="fName" type="text" name="firstname" />
+        </div>
+        <div>
+            <label>CheckMe</label>
+            <input id="check" type="checkbox" name="checkme" />
+        </div>
+        <div>
+            <button id="btnSubmit" type="button" onclick=validateForm() value="submit">Submit</button>
+        </div>
+
+    </form>
+    <script>
+        function validateForm() {
+
+            if (document.getElementById('fName').value === "") {
+                alert("Please fill in the Your first name box.");
+
+            }
+            else if (document.getElementById('check').checked === false) {
+                alert("Please check the Terms & Conditions box.");
+
+            }
+            else {
+                alert("Your form has been sucessfully submitted")
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
